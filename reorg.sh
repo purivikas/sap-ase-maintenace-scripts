@@ -58,7 +58,7 @@ go
 
 isql -U${DbUser} -P${DbPass} -S${DSQUERY} -D${dbname} -i /tmp/updstats.sql | tee -a /tmp/reorg_${dbname}.out
 
-cat /dumps/sybase/reorg_${dbname}.out | mailx -s "UK ${dbname} reorg" ${MAILLIST}
+cat /tmp/reorg_${dbname}.out | mailx -s "UK ${dbname} reorg" ${MAILLIST}
 
 #######
 # Fin #
